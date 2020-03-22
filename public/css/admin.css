@@ -1,0 +1,314 @@
+body{
+    direction: rtl;
+    text-align: right;
+    font-family: IRANSansWeb, monospace;
+    position: absolute;
+    width: 100%;
+    min-height: 700px;
+    background-color: #f6f8fa;
+}
+@font-face {
+    font-family:'IRANSansWeb';
+    src:url('../fonts/iransans/IRANSansWeb.eot') format("embedded-opentype"),
+    url('../fonts/iransans/IRANSansWeb.woff') format("woff"),
+    url('../fonts/iransans/IRANSansWeb.ttf') format("truetype");
+    font-size:15px;
+}
+.container-fluid{
+    padding: 0;
+}
+/*Side Bar Area*/
+.admin_sidebar{
+    width: 240px;
+    background: #222831;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+}
+#sidebar_menu{
+    padding: 0;
+    margin-top: 60px;
+}
+#sidebar_menu li{
+    list-style: none;
+}
+#sidebar_menu li a{
+    color: #eeeeee;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    font-size: 14px;
+    cursor: pointer;
+}
+#sidebar_menu .fa-angle-left{
+    float: left;
+    font-size: 16px;
+    padding-left: 5px;
+}
+.child_menu{
+    padding-top: 10px !important;
+    background: #393e46;
+    display: none;
+}
+.child_menu a{
+    width: 100%;
+    font-size: 13px !important;
+    padding-top: 5px !important;
+}
+#sidebar_menu .active{
+    background: #00adb5;
+}
+.admin_sidebar .fa-bars{
+    color: #eeeeee;
+    font-size: 18px;
+    float: left;
+    cursor: pointer;
+    margin: 15px;
+}
+.toggled{
+    width: 50px !important;
+}
+.toggled .sidebar_li_text{
+    display: none;
+}
+.toggled .fa-angle-left{
+    display: none;
+}
+.toggled .fa-angle-down{
+    display: none;
+}
+.toggled #sidebar_menu li a{
+    text-align: center;
+}
+.toggled .child_menu{
+    margin-right: 50px;
+    width: 230px !important;
+    position: absolute;
+    margin-top: -41px;
+    z-index: 90000000;
+    border-right: 1px solid #E1E1E1;
+}
+.toggled .child_menu a{
+    text-align: right !important;
+}
+/*###*/
+/* Page Content*/
+.admin_content{
+    margin-right: 240px;
+}
+.content_box{
+    width: 97%;
+    margin: 40px auto;
+}
+.panel{
+    background: white;
+    width: 100%;
+    border: 1px solid #f3f3f3;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+.panel .header{
+    padding-right: 15px;
+    height: 45px;
+    border-bottom: 1px solid #f3f3f3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.panel .panel_content{
+    padding: 30px;
+}
+.form-control{
+    width: 300px;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    font-size: 14px;
+    display: inline-block;
+}
+.form-control:focus{
+    box-shadow: none !important;
+}
+label{
+    width: 170px;
+    font-size: 14px;
+    color: #686868;
+}
+.btn-success{
+    border-radius: 0;
+    -webkit-border-radius: 0;
+}
+.btn-primary{
+    border-radius: 0;
+    -webkit-border-radius: 0;
+}
+.has_error{
+    color:red;
+    font-size: 13px;
+}
+/*Bootstrap Select*/
+.bootstrap-select .dropdown-toggle{
+    width: 300px;
+}
+.bootstrap-select .btn-light{
+    background: white !important;
+    border: 1px solid #ced4da !important;
+    border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+}
+.bootstrap-select .btn-light .filter-option{
+    text-align: right !important;
+}
+.bootstrap-select .dropdown-menu{
+    text-align: right !important;
+    overflow-x: hidden !important;
+}
+.bs-searchbox{
+    width: 300px !important;
+}
+.dropdown-menu .inner .show a .text{
+    font-size: 13px;
+}
+/*####*/
+/*Table*/
+.table-striped tbody tr:nth-of-type(2n+1){
+    background-color:#f6f8fa !important;
+}
+.table tr th{
+    font-size: 15px !important;
+    text-align: center;
+}
+.table tr td{
+    text-align: center;
+}
+/*####*/
+/*Message Area*/
+.message_div{
+    background: rgba(225,225,225,0.5);
+    width: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 10000;
+    display: none;
+}
+.message_box{
+    background: white;
+    width: 360px;
+    height: 135px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    font-size: 16px;
+    padding: 20px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    text-align: center;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.1);
+    /*-webkit-box-shadow: 0 0 13px 3px rgba(0,173,179,0.24);*/
+    /*-moz-box-shadow: 0 0 13px 3px rgba(0,173,179,0.24);*/
+    /*box-shadow: 0 0 13px 3px rgba(0,173,179,0.24);*/
+}
+.message_box #msg{
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    font-size: 15px !important;
+}
+.message_box .alert{
+    padding: 5px 30px 5px 30px !important;
+    cursor: pointer;
+    font-size: 14px !important;
+}
+.message_box .alert-danger{
+    margin-right: 10px;
+}
+/*####*/
+/* View Trash item in table*/
+.pagination{
+    padding: 0 !important;
+}
+.dropdown-item.off{
+    color: #999999 !important;
+}
+.dropdown-item{
+    cursor: pointer;
+}
+.dropdown .dropdown-menu{
+    text-align: right !important;
+    font-size: 13px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    max-height: 300px !important;
+}
+.dropdown-menu .dropdown-item{
+    padding: 10px  !important;
+}
+.dropdown-toggle:focus{
+    box-shadow: none !important;
+}
+.header .dropdown-menu .dropdown-item:focus{
+    background: red !important;
+}
+
+.tooltip{
+    font-family: IRANSansWeb, serif !important;
+}
+.tooltip-inner{
+    background: #68a5ff !important;
+    font-size:  13px !important;
+}
+
+.table .fa-remove{
+    color: red;
+}
+/*####*/
+/*###*/
+/* Breadcrumb Area*/
+.breadcrumb{
+    width: 100%;
+    background: white !important;
+    padding: 0;
+    border: 1px solid #f3f3f3;
+}
+.breadcrumb .list-inline{
+    margin-bottom: 0 !important;
+    width: 100%;
+    padding-right: 10px;
+}
+.breadcrumb .list-inline li{
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.breadcrumb .list-inline li a{
+    color: #222831;
+    text-decoration: none;
+}
+.breadcrumb .list-inline li a .fa-angle-left{
+    padding-right: 5px;
+    padding-top: 1px;
+    font-size: 16px;
+    padding-left: 5px;
+    float: left;
+}
+.breadcrumb .fa-home{
+    padding-left: 5px;
+}
+/*Date Area*/
+.date_li{
+    float: left;
+    background: #00bfd6;
+    color: white;
+    padding-right: 12px;
+    padding-left: 12px;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+}
+/*End Date Area*/
+/* End Breadcrumb Area*/
